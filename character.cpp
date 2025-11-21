@@ -1,4 +1,4 @@
-/* Program name: character.h
+/* Program name: character.cpp
  * Author: Sahar Musleh
  * Date last updated: 11/21/2025
  * Purpose: Implements constructors and toString() methods for Character classes to demonstrate polymorphism in an RPG character system.
@@ -7,15 +7,68 @@
 #include "character.h"
 #include <sstream>
 
-Fighter::Fighter(std::String n) : Character(n) {
-    HP = 300; MP = 0; Strength = 16; Dexterity = 10; Intelligence = 5;
+// Fighter implementation
+Fighter::Fighter(std::string n) : Character(n) {
+    HP = 300; MP = 0;
+    Strength = 16; Dexterity = 10; Intelligence = 5;
     Speed = 8; Endurance = 15; Faith = 5;
 }
 
 std::string Fighter::toString() const {
     std::ostringstream out;
     out << name << " the Fighter stats:\n"
-        << "HP: " << HP << " MP: " << "\n"
+        << "HP: " << HP << " MP: " << MP << "\n"
+        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+    return out.str();
+}
+
+// Rogue implementation
+Rogue::Rogue(std::string n) : Character(n) {
+    HP = 200; MP = 0;
+    Strength = 10; Dexterity = 16; Intelligence = 16;
+    Speed = 15; Endurance = 8; Faith = 5;
+}
+
+std::string Rogue::toString() const {
+    std::ostringstream out;
+    out << name << " the Rogue stats:\n"
+        << "HP: " << HP << " MP: " << MP << "\n"
+        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+    return out.str();
+}
+
+// Magician implementation
+Magician::Magician(std::string n) : Character(n) {
+    HP = 250; MP = 200;
+    Strength = 5; Dexterity = 10; Intelligence = 16;
+    Speed = 16; Endurance = 5; Faith = 8;
+}
+
+std::string Magician::toString() const {
+    std::ostringstream out;
+    out << name << " the Magician stats:\n"
+        << "HP: " << HP << " MP: " << MP << "\n"
+        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+    return out.str();
+}
+
+// Cleric implementation
+Cleric::Cleric(std::string n) : Character(n) {
+    HP = 200; MP = 200;
+    Strength = 5; Dexterity = 10; Intelligence = 8;
+    Speed = 16; Endurance = 5; Faith = 16;
+}
+
+std::string Cleric::toString() const {
+    std::ostringstream out;
+    out << name << " the Cleric stats:\n"
+        << "HP: " << HP << " MP: " << MP << "\n"
         << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
         << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
         << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
