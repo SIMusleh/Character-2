@@ -7,3 +7,15 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 #include <string>
+
+class Character {
+protected:
+    std::string name;
+    double HP, MP;
+    int strength, Dexterity, Intelligence, Speed, Endurance, Faith;
+
+public:
+    Character(std::string n) : name(n) {}
+    virtual ~Character() {}
+    virtual std::string toString() const = 0;
+};
