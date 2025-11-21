@@ -6,6 +6,7 @@
 
 #include "character.h"
 #include <sstream>
+#include <iomanip>
 
 // Fighter implementation
 Fighter::Fighter(std::string n) : Character(n) {
@@ -17,10 +18,14 @@ Fighter::Fighter(std::string n) : Character(n) {
 std::string Fighter::toString() const {
     std::ostringstream out;
     out << name << " the Fighter stats:\n"
-        << "HP: " << HP << " MP: " << MP << "\n"
-        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
-        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
-        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+        << "HP: " << std::fixed << std::setprecision(2) << HP << "\n"
+        << "MP: " << MP << "\n"
+        << "Strength: " << Strength << "\n"
+        << "Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << "\n"
+        << "Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << "\n"
+        << "Faith: " << Faith << "\n";
     return out.str();
 }
 
@@ -34,10 +39,14 @@ Rogue::Rogue(std::string n) : Character(n) {
 std::string Rogue::toString() const {
     std::ostringstream out;
     out << name << " the Rogue stats:\n"
-        << "HP: " << HP << " MP: " << MP << "\n"
-        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
-        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
-        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+        << "HP: " << std::fixed << std::setprecision(2) << HP << "\n"
+        << "MP: " << MP << "\n"
+        << "Strength: " << Strength << "\n"
+        << "Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << "\n"
+        << "Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << "\n"
+        << "Faith: " << Faith << "\n";
     return out.str();
 }
 
@@ -51,10 +60,14 @@ Magician::Magician(std::string n) : Character(n) {
 std::string Magician::toString() const {
     std::ostringstream out;
     out << name << " the Magician stats:\n"
-        << "HP: " << HP << " MP: " << MP << "\n"
-        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
-        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
-        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+        << "HP: " << std::fixed << std::setprecision(2) << HP << "\n"
+        << "MP: " << MP << "\n"
+        << "Strength: " << Strength << "\n"
+        << "Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << "\n"
+        << "Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << "\n"
+        << "Faith: " << Faith << "\n";
     return out.str();
 }
 
@@ -68,9 +81,13 @@ Cleric::Cleric(std::string n) : Character(n) {
 std::string Cleric::toString() const {
     std::ostringstream out;
     out << name << " the Cleric stats:\n"
-        << "HP: " << HP << " MP: " << MP << "\n"
-        << "Strength: " << Strength << " Dexterity: " << Dexterity << "\n"
-        << "Intelligence: " << Intelligence << " Speed: " << Speed << "\n"
-        << "Endurance: " << Endurance << " Faith: " << Faith << "\n";
+        << "HP: " << std::fixed << std::setprecision(2) << HP << "\n"
+        << "MP: " << MP << "\n"
+        << "Strength: " << Strength << "\n"
+        << "Dexterity: " << Dexterity << "\n"
+        << "Intelligence: " << Intelligence << "\n"
+        << "Speed: " << Speed << "\n"
+        << "Endurance: " << Endurance << "\n"
+        << "Faith: " << Faith << "\n";
     return out.str();
 }
