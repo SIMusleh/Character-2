@@ -11,16 +11,16 @@ int main() {
     int num;
     std::cout << "How many characters do you want to create? ";
     std::cin >> num;
-
+    // Allocate dynamic array for characters
     Character** party = new Character*[num];
-
+    // Loop to create each character
     for (int i = 0; i < num; i++) {
         std::string name;
         int choice;
         std::cout << "What is the name for character #" << (i+1) << "? ";
         std::cin.ignore();
         std::getline(std::cin, name);
-
+        
         std::cout << "What character class do you want " << name << " to be?\n"
                   << "1. Fighter Class\n2. Rogue Class\n3. Magician Class\n4. Cleric Class\n";
         std::cin >> choice;
@@ -34,12 +34,13 @@ int main() {
                      party[i] = new Fighter(name);
         }
     }
-
+    // Display all characters in the party
     std::cout << "\nYour Party:\n";
     for (int i = 0; i < num; i++) {
         std::cout << party[i]->toString() << "\n";
         delete party[i];
     }
+    // Clean up memory
     delete[] party;
 
     return 0;
