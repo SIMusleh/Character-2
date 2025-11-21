@@ -10,11 +10,12 @@
 
 // Fighter implementation
 Fighter::Fighter(std::string n) : Character(n) {
+    // Fighter attributes
     HP = 300; MP = 0;
     Strength = 16; Dexterity = 10; Intelligence = 5;
     Speed = 8; Endurance = 15; Faith = 5;
 }
-
+// Return formatted stats for Fighter
 std::string Fighter::toString() const {
     std::ostringstream out;
     out << name << " the Fighter stats:\n"
@@ -31,11 +32,12 @@ std::string Fighter::toString() const {
 
 // Rogue implementation
 Rogue::Rogue(std::string n) : Character(n) {
+    // Rogue attributes
     HP = 200; MP = 0;
     Strength = 10; Dexterity = 16; Intelligence = 16;
     Speed = 15; Endurance = 8; Faith = 5;
 }
-
+// Returns formatted stats for Rogue
 std::string Rogue::toString() const {
     std::ostringstream out;
     out << name << " the Rogue stats:\n"
@@ -52,11 +54,12 @@ std::string Rogue::toString() const {
 
 // Magician implementation
 Magician::Magician(std::string n) : Character(n) {
+    // Magician atttibutes
     HP = 250; MP = 200;
     Strength = 5; Dexterity = 10; Intelligence = 16;
     Speed = 16; Endurance = 5; Faith = 8;
 }
-
+// Returns formatted stats for Magician
 std::string Magician::toString() const {
     std::ostringstream out;
     out << name << " the Magician stats:\n"
@@ -73,11 +76,12 @@ std::string Magician::toString() const {
 
 // Cleric implementation
 Cleric::Cleric(std::string n) : Character(n) {
+   // Cleric attrubutes 
     HP = 200; MP = 200;
     Strength = 5; Dexterity = 10; Intelligence = 8;
     Speed = 16; Endurance = 5; Faith = 16;
 }
-
+// Returns formatted stats for Cleric
 std::string Cleric::toString() const {
     std::ostringstream out;
     out << name << " the Cleric stats:\n"
